@@ -1,2 +1,4 @@
 # ToDoList
-Repositório para o trabalho de POO
+## Trabalho de POO
+
+Github integrado ao Netbeans/IntelliJ
