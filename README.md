@@ -8,3 +8,4 @@ Github integrado ao Netbeans/IntelliJ
 
 Ayslan Araújo - Auxilio na Criação do Repositório e na criação do arquivo "Tarefa" presente no package ucb.aplicacao.model .
 
+Caio Macedo Queiroz - Auxilio na coleta de usuarios do git hub
