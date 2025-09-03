@@ -68,7 +68,7 @@ public class Tarefa {
         this.titulo = titulo;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
