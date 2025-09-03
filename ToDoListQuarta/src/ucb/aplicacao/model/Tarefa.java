@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Tarefa {
 
-    private long id; //Pode deixar a incrementação automatico
+    private Long id; //Pode deixar a incrementação automatico
     private String titulo;
     private String descricao;
     private boolean completa;
@@ -68,7 +68,7 @@ public class Tarefa {
         this.titulo = titulo;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
