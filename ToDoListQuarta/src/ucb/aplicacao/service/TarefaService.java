@@ -8,9 +8,10 @@ import java.util.List;
 public class TarefaService {
     private List<Tarefa> tarefas = new ArrayList<Tarefa>();
 
-    public void criarTarefa(String nome, String descricao) {
+    public Tarefa criarTarefa(String nome, String descricao) {
         Tarefa tarefa = new Tarefa(nome, descricao);
         tarefas.add(tarefa);
+        return tarefa;
     }
 
     public List<Tarefa> getTarefas() {
