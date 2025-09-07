@@ -4,6 +4,7 @@ package ucb.aplicacao.cli;
 import ucb.aplicacao.model.Tarefa;
 import ucb.aplicacao.service.TarefaService;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Scanner;
 
@@ -22,19 +23,38 @@ public class Main {
             System.out.println(" Escolha uma opção ");
         int opcao = entrada.nextInt();
         entrada.nextLine();
+
+
         switch (opcao){
             case 1 -> {
+
                 System.out.println("Titulo");
                 String titulo = entrada.nextLine();
+
                 System.out.println("Descrição");
                 String descricao = entrada.nextLine();
-                Tarefa nova = service.criarTarefa(titulo,descricao);
-                System.out.println("Tarefa Criada:" + nova.getTitulo());
 
+                System.out.println("Tarefa Completa");
+                boolean completa = entrada.nextBoolean();
+
+                Tarefa nova = service.criarTarefa(titulo,descricao,completa);
+                System.out.println("ID" + nova.getId());
+                System.out.println("Tarefa Criada:" + nova.getTitulo());
+                ;
+                break;
             }
 
             case 2 -> {
-                List<Tarefa> tarefas = service.getTarefas();
+
+            }
+            case 3 -> {
+                System.out.println("========= Atualizar Tarefa =========");
+            }
+            case 4 -> {
+                System.out.println("========= Remover Tarefa =========");
+            }
+            case 5 -> {
+                System.out.println("========= Consultar tarefa =========");
             }
 
         }
