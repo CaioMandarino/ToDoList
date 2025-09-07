@@ -14,6 +14,14 @@ public class TarefaService {
         return tarefa;
     }
 
+    public Tarefa alterarTarefa(){
+  //      System.out.println("Teste");
+  //      return tarefa;
+  //       BASE
+    }
+
+
+
     public List<Tarefa> getTarefas() {
         return tarefas;
     }

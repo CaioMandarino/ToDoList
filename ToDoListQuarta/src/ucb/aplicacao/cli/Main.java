@@ -34,8 +34,18 @@ public class Main {
             }
 
             case 2 -> {
-                List<Tarefa> tarefas = service.getTarefas();
+                System.out.println("Listando Tarefas");
             }
+            case 3 -> {
+                System.out.println("Atualizar Tarefa");
+            }
+            case 4 -> {
+                System.out.println("Remover Tarefa");
+            }
+            case 5 -> {
+                System.out.println("LConsultar Tarefa");
+            }
+
 
         }
         }
