@@ -14,6 +14,7 @@
 
             Tarefa tarefa = new Tarefa(id++ ,titulo, descricao, completa);
                  tarefas.add(tarefa);
+                 tarefas.add(tarefa);
 
 
             return tarefa;
