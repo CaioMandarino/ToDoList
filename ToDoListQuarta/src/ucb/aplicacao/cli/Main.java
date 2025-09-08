@@ -27,7 +27,7 @@ public class Main {
 
         switch (opcao){
             case 1 -> {
-
+                System.out.println("==================================================");
                 System.out.println("Titulo");
                 String titulo = entrada.nextLine();
 
@@ -37,11 +37,18 @@ public class Main {
                 System.out.println("Tarefa Completa");
                 boolean completa = entrada.nextBoolean();
 
+
                 Tarefa nova = service.criarTarefa(titulo,descricao,completa);
-                System.out.println("ID" + nova.getId());
-                System.out.println("Tarefa Criada:" + nova.getTitulo());
-                ;
-                break;
+
+                nova.getDataAgora();
+                System.out.println("==================================================");
+                System.out.println("                    Resultados");
+                System.out.println("==================================================");
+                System.out.println("ID :" + nova.getId());
+                System.out.println("Tarefa Criada: " + nova.getTitulo());
+                System.out.println("Data: " + nova.getDataAgora());
+
+
             }
 
             case 2 -> {

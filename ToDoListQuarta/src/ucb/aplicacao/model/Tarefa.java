@@ -12,7 +12,7 @@ public class Tarefa {
     private LocalDateTime dataAgora;
 
 
-    //Padrão
+    //Padrão Marcar como concluida
     public Tarefa(){
         this.dataAgora = LocalDateTime.now();
         this.completa = false;

@@ -2,16 +2,21 @@
 
     import ucb.aplicacao.model.Tarefa;
 
+    import java.time.LocalDateTime;
     import java.util.ArrayList;
     import java.util.List;
 
     public class TarefaService {
 
         private List<Tarefa> tarefas = new ArrayList<Tarefa>();
-        public Tarefa criarTarefa (String titulo, String descricao, boolean completa) {
+        private long id = 0;
 
-            Tarefa tarefa = new Tarefa(titulo, descricao);
-            tarefas.add(tarefa);
+        public Tarefa criarTarefa (String titulo, String descricao,boolean completa) {
+
+            Tarefa tarefa = new Tarefa(id++ ,titulo, descricao, completa);
+                        tarefas.add(tarefa);
+
+
             return tarefa;
 
         }
