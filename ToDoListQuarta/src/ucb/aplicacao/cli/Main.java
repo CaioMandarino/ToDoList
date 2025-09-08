@@ -34,7 +34,19 @@ public class Main {
             }
 
             case 2 -> {
+<<<<<<< Updated upstream
                 System.out.println("Listando Tarefas");
+=======
+                System.out.println("Atualizar");
+                List<Tarefa> tarefas = service.listarTarefas();
+                if (tarefas.isEmpty()){
+                    System.out.println("A lista esta vazia");
+                }
+                else {
+
+                }
+
+>>>>>>> Stashed changes
             }
             case 3 -> {
                 System.out.println("Atualizar Tarefa");
@@ -43,7 +55,27 @@ public class Main {
                 System.out.println("Remover Tarefa");
             }
             case 5 -> {
+<<<<<<< Updated upstream
                 System.out.println("LConsultar Tarefa");
+=======
+                System.out.println("========= Consultar tarefa =========");
+                System.out.println("Digite o valor do ID para Consultar a tarefa");
+
+                long PegaID = entrada.nextLong();
+                entrada.nextLine();
+
+                Tarefa IdAlvo = service.consultarTarefa(PegaID);
+                if (IdAlvo != null ){
+                    System.out.println(IdAlvo.getId());
+                    System.out.println(IdAlvo.getTitulo());
+                    System.out.println(IdAlvo.getDescricao());
+                }
+
+
+
+
+
+>>>>>>> Stashed changes
             }
 
 
