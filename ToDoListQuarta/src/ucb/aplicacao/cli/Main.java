@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         TarefaService service = new TarefaService();
         Scanner entrada = new Scanner(System.in);
-        while (true){
+        while (true) {
             System.out.println("===============GERENCIADOR DE TAREFAS===============");
             System.out.println(" (1). Cadastrar ");
             System.out.println(" (2). Listar Tarefas ");
@@ -20,67 +20,65 @@ public class Main {
             System.out.println(" (5). Consultar Tarefa ");
             System.out.println(" (6). Sair ");
             System.out.println(" Escolha uma opção ");
-        int opcao = entrada.nextInt();
-        entrada.nextLine();
+            int opcao = entrada.nextInt();
+            entrada.nextLine();
 
 
-        switch (opcao){
-            case 1 -> {
-                System.out.println("==================================================");
-                System.out.println("Titulo");
-                String titulo = entrada.nextLine();
+            switch (opcao) {
+                case 1 -> {
+                    System.out.println("==================================================");
+                    System.out.println("Titulo");
+                    String titulo = entrada.nextLine();
 
-                System.out.println("Descrição");
-                String descricao = entrada.nextLine();
+                    System.out.println("Descrição");
+                    String descricao = entrada.nextLine();
 
-                System.out.println("Tarefa Completa");
-                boolean completa = entrada.nextBoolean();
-
-
-                Tarefa nova = service.criarTarefa(titulo,descricao,completa);
-                nova.getDataAgora();
-                System.out.println("==================================================");
-                System.out.println("                    Resultados");
-                System.out.println("==================================================");
-                System.out.println("ID :" + nova.getId());
-                System.out.println("Tarefa Criada: " + nova.getTitulo());
-                System.out.println("Data: " + nova.getDataAgora());
+                    System.out.println("Tarefa Completa");
+                    boolean completa = entrada.nextBoolean();
 
 
-            }
+                    Tarefa nova = service.criarTarefa(titulo, descricao, completa);
+                    nova.getDataAgora();
+                    System.out.println("==================================================");
+                    System.out.println("                    Resultados");
+                    System.out.println("==================================================");
+                    System.out.println("ID :" + nova.getId());
+                    System.out.println("Tarefa Criada: " + nova.getTitulo());
+                    System.out.println("Data: " + nova.getDataAgora());
 
-            case 2 -> {
-                List<Tarefa> tarefas = service.listarTarefas();
-                if (tarefas.isEmpty()){
-                    System.out.println("A lista esta vazia");
-                }
-                else {
 
                 }
 
-            }
-            case 3 -> {
-                System.out.println("Atualizar Tarefa");
-            }
-            case 4 -> {
-                System.out.println("Remover Tarefa");
-            }
-            case 5 -> {
-                System.out.println("========= Consultar tarefa =========");
-                System.out.println("Digite o valor do ID para Consultar a tarefa");
+                case 2 -> {
+                    List<Tarefa> tarefas = service.listarTarefas();
+                    if (tarefas.isEmpty()) {
+                        System.out.println("A lista esta vazia");
+                    }
 
-                long PegaID = entrada.nextLong();
-                entrada.nextLine();
+                }
+                case 3 -> {
+                    System.out.println("Atualizar Tarefa");
+                }
+                case 4 -> {
+                    System.out.println("Remover Tarefa");
+                }
+                case 5 -> {
+                    System.out.println("========= Consultar tarefa =========");
+                    System.out.println("Digite o valor do ID para Consultar a tarefa");
 
-                Tarefa IdAlvo = service.consultarTarefa(PegaID);
-                if (IdAlvo != null ){
-                    System.out.println("ID: " + IdAlvo.getId());
-                    System.out.println("Título: " + IdAlvo.getTitulo());
-                    System.out.println("Descrição: " + IdAlvo.getDescricao());
+                    long PegaID = entrada.nextLong();
+                    entrada.nextLine();
+
+                    Tarefa IdAlvo = service.consultarTarefa(PegaID);
+                    if (IdAlvo != null) {
+                        System.out.println("ID: " + IdAlvo.getId());
+                        System.out.println("Título: " + IdAlvo.getTitulo());
+                        System.out.println("Descrição: " + IdAlvo.getDescricao());
+                    }
+
+
+                }
             }
-
-
         }
-        }
-        }
+    }
     }
