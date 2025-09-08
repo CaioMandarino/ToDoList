@@ -4,7 +4,6 @@ package ucb.aplicacao.cli;
 import ucb.aplicacao.model.Tarefa;
 import ucb.aplicacao.service.TarefaService;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Scanner;
 
@@ -61,15 +60,25 @@ public class Main {
 
             }
             case 3 -> {
-                System.out.println("========= Atualizar Tarefa =========");
-
+                System.out.println("Atualizar Tarefa");
             }
             case 4 -> {
-                System.out.println("========= Remover Tarefa =========");
+                System.out.println("Remover Tarefa");
             }
             case 5 -> {
                 System.out.println("========= Consultar tarefa =========");
+                System.out.println("Digite o valor do ID para Consultar a tarefa");
+
+                long PegaID = entrada.nextLong();
+                entrada.nextLine();
+
+                Tarefa IdAlvo = service.consultarTarefa(PegaID);
+                if (IdAlvo != null ){
+                    System.out.println("ID: " + IdAlvo.getId());
+                    System.out.println("Título: " + IdAlvo.getTitulo());
+                    System.out.println("Descrição: " + IdAlvo.getDescricao());
             }
+
 
         }
         }
