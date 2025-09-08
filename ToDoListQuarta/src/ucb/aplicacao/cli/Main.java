@@ -39,7 +39,6 @@ public class Main {
 
 
                 Tarefa nova = service.criarTarefa(titulo,descricao,completa);
-
                 nova.getDataAgora();
                 System.out.println("==================================================");
                 System.out.println("                    Resultados");
@@ -52,6 +51,13 @@ public class Main {
             }
 
             case 2 -> {
+                List<Tarefa> tarefas = service.listarTarefas();
+                if (tarefas.isEmpty()){
+                    System.out.println("A lista esta vazia");
+                }
+                else {
+
+                }
 
             }
             case 3 -> {

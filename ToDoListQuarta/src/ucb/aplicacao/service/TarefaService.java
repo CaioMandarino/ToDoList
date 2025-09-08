@@ -2,7 +2,6 @@
 
     import ucb.aplicacao.model.Tarefa;
 
-    import java.time.LocalDateTime;
     import java.util.ArrayList;
     import java.util.List;
 
@@ -14,15 +13,18 @@
         public Tarefa criarTarefa (String titulo, String descricao,boolean completa) {
 
             Tarefa tarefa = new Tarefa(id++ ,titulo, descricao, completa);
-                        tarefas.add(tarefa);
+                 tarefas.add(tarefa);
 
 
             return tarefa;
 
         }
 
-        public List<Tarefa> listarTarefa() {
-
-            return tarefas;
+        public List<Tarefa> listarTarefas(String titulo, String descricao) {
+            for(int i =0; i< tarefas.size(); i+=1){
+                tarefas.
+                System.out.println("PENIS");
+                return tarefas;
+                }
         }
     }
