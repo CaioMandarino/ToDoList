@@ -12,14 +12,14 @@ public class Main {
         TarefaService service = new TarefaService();
         Scanner entrada = new Scanner(System.in);
         while (true){
-            System.out.println("\n===============GERENCIADOR DE TAREFAS===============");
+            System.out.println("===============GERENCIADOR DE TAREFAS===============");
             System.out.println(" (1). Cadastrar ");
             System.out.println(" (2). Listar Tarefas ");
             System.out.println(" (3). Atualizar Tarefa ");
             System.out.println(" (4). Remover Tarefa ");
             System.out.println(" (5). Consultar Tarefa ");
             System.out.println(" (6). Sair ");
-            System.out.println(" \nEscolha uma opção ");
+            System.out.println(" Escolha uma opção ");
         int opcao = entrada.nextInt();
         entrada.nextLine();
 
@@ -54,7 +54,9 @@ public class Main {
                 if (tarefas.isEmpty()){
                     System.out.println("A lista esta vazia");
                 }
+                else {
 
+                }
 
             }
             case 3 -> {
