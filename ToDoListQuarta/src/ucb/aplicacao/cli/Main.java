@@ -18,7 +18,8 @@ public class Main {
             System.out.println(" (3). Atualizar Tarefa ");
             System.out.println(" (4). Remover Tarefa ");
             System.out.println(" (5). Consultar Tarefa ");
-            System.out.println(" (6). Sair ");
+            System.out.println(" (6). Marcar como Concluida ");
+            System.out.println(" (7). Sair ");
             System.out.println(" Escolha uma opção ");
             int opcao = entrada.nextInt();
             entrada.nextLine();
@@ -103,6 +104,14 @@ public class Main {
                         System.out.println("Status da tarefa: " + IdAlvo.isCompleta());
 
                     }
+                }
+                    case 6 -> {
+                        System.out.println("========= Marcar tarefa como concluida =========");
+
+
+
+
+
                 }
             }
         }
