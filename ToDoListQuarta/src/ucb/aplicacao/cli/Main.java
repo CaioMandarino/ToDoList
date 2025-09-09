@@ -75,7 +75,18 @@ public class Main {
                     }
                 }
                 case 4 -> {
-                    System.out.println("Remover Tarefa");
+                    System.out.println("========= Remover Tarefa =========");
+                    service.listarTarefas(); 
+                    System.out.print("Digite o ID da tarefa que deseja remover: ");
+                    long idParaRemover = entrada.nextLong();
+                    entrada.nextLine();
+                    boolean foiRemovido = service.removerTarefa(idParaRemover);
+                    if (foiRemovido) {
+                        System.out.println("Tarefa removida com sucesso!");
+                    } else {
+                        System.out.println("ERRO: Tarefa com ID " + idParaRemover + " não foi encontrada.");
+                    }
+                
                 }
                 case 5 -> {
                     System.out.println("========= Consultar tarefa =========");
