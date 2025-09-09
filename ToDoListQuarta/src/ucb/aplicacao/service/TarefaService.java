@@ -43,4 +43,12 @@ public class TarefaService {
         }
         return null;
     }
+
+    public Tarefa atualizarTarefa(long id, String novoTitulo, String novaDescricao) {
+        Tarefa tarefaSelecionada = consultarTarefa(id);
+        if (tarefaSelecionada == null) { return null; }
+        tarefaSelecionada.setTitulo(novoTitulo);
+        tarefaSelecionada.setDescricao(novaDescricao);
+        return tarefaSelecionada;
+    }
 }

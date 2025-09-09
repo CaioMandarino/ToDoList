@@ -56,7 +56,23 @@ public class Main {
 
                 }
                 case 3 -> {
-                    System.out.println("Atualizar Tarefa");
+                    System.out.println("========= Atualizar tarefa =========");
+                    System.out.println("Digite o valor do ID para Atualizar a tarefa");
+                    long pegaID = entrada.nextLong();
+                    entrada.nextLine();
+
+                    System.out.println("Novo Titulo: ");
+                    String novoTitulo = entrada.nextLine();
+
+                    System.out.println("Nova Descricao: ");
+                    String novaDescricao = entrada.nextLine();
+
+                    Tarefa tarefaAtualizada = service.atualizarTarefa(pegaID, novoTitulo, novaDescricao);
+                    if (tarefaAtualizada == null) {
+                        System.out.println("Tarefa não encontrada");
+                    } else {
+                        System.out.println("A tarefa " + tarefaAtualizada.getTitulo() + " foi atualizada");
+                    }
                 }
                 case 4 -> {
                     System.out.println("Remover Tarefa");
@@ -65,10 +81,10 @@ public class Main {
                     System.out.println("========= Consultar tarefa =========");
                     System.out.println("Digite o valor do ID para Consultar a tarefa");
 
-                    long PegaID = entrada.nextLong();
+                    long pegaID = entrada.nextLong();
                     entrada.nextLine();
 
-                    Tarefa IdAlvo = service.consultarTarefa(PegaID);
+                    Tarefa IdAlvo = service.consultarTarefa(pegaID);
                     if (IdAlvo != null) {
                         System.out.println("ID: " + IdAlvo.getId());
                         System.out.println("Título: " + IdAlvo.getTitulo());
