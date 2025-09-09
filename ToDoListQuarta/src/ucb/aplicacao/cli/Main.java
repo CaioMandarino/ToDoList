@@ -22,8 +22,7 @@ public class Main {
             System.out.println(" Escolha uma opção ");
             int opcao = entrada.nextInt();
             entrada.nextLine();
-
-
+          
             switch (opcao) {
                 case 1 -> {
                     System.out.println("==================================================");
@@ -75,10 +74,8 @@ public class Main {
                         System.out.println("Título: " + IdAlvo.getTitulo());
                         System.out.println("Descrição: " + IdAlvo.getDescricao());
                     }
-
-
                 }
             }
         }
     }
-    }
+ }
