@@ -51,4 +51,7 @@ public class TarefaService {
         tarefaSelecionada.setDescricao(novaDescricao);
         return tarefaSelecionada;
     }
+    public boolean removerTarefa(long id) {
+        return tarefas.removeIf(tarefa -> tarefa.getId().equals(id));
+    }
 }
