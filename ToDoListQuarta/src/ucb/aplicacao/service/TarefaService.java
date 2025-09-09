@@ -10,25 +10,21 @@ public class TarefaService {
     private long id = 0;
 
     public Tarefa criarTarefa (String titulo, String descricao, boolean completa) {
-
         Tarefa tarefa = new Tarefa(id++ ,titulo, descricao, completa);
-
         tarefas.add(tarefa);
-
         return tarefa;
     }
 
     public List<Tarefa> listarTarefas() {
-      
         if( !tarefas.isEmpty() ) {
             for (int i = 0; i < tarefas.size(); i += 1) {
                 System.out.println("\n-+-+-+-+-+-+-+-+-+-+\n");
-                System.out.println("\nID: " + tarefas.get(i).getId());
-                System.out.println("\nTitulo: " + tarefas.get(i).getTitulo());
+                System.out.println("ID: " + tarefas.get(i).getId());
+                System.out.println("Titulo: " + tarefas.get(i).getTitulo());
                 System.out.println("Data-Criação: " + tarefas.get(i).getDataAgora());
-                System.out.println("\nDescrição: " + tarefas.get(i).getDescricao());
-                System.out.println("\nCompleta: " + tarefas.get(i).isCompleta() + "\n");
-
+                System.out.println("Descrição: " + tarefas.get(i).getDescricao());
+                String status = tarefas.get(i).isCompleta() ? "Concluída" : "Pendente";
+                System.out.println("Status: " + status + "\n");
             }
             System.out.println("\n-+-+-+-+-+-+-+-+-+-+\n");
         }
@@ -51,7 +47,17 @@ public class TarefaService {
         tarefaSelecionada.setDescricao(novaDescricao);
         return tarefaSelecionada;
     }
+
     public boolean removerTarefa(long id) {
         return tarefas.removeIf(tarefa -> tarefa.getId().equals(id));
+    }
+
+    public boolean marcarComoConcluida(long id, boolean completa) {
+        Tarefa tarefaSelecionada = consultarTarefa(id);
+        if (tarefaSelecionada == null) { 
+            return false; 
+        }
+        tarefaSelecionada.setCompleta(completa);
+        return true;
     }
 }
