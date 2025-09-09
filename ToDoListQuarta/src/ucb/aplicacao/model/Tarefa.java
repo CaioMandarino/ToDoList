@@ -5,14 +5,14 @@ import java.time.format.DateTimeFormatter;
 
 public class Tarefa {
 
-    private Long id; //Pode deixar a incrementação automatico
+    private Long id = 0L; //Pode deixar a incrementação automatico
     private String titulo;
     private String descricao;
     private boolean completa;
     private LocalDateTime dataAgora;
 
 
-    //Padrão
+    //Padrão Marcar como concluida
     public Tarefa(){
         this.dataAgora = LocalDateTime.now();
         this.completa = false;
@@ -35,6 +35,7 @@ public class Tarefa {
         this.id = id;
         this.completa = completa;
     }
+
     //GETS E SETS
     public LocalDateTime getDataAgora() {
         return dataAgora;
