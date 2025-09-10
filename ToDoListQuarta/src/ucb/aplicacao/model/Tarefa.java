@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Tarefa {
 
-    private Long id = 0L; //Pode deixar a incrementação automatico
+    private Long id = 0L;//Pode deixar a incrementação automatico
     private String titulo;
     private String descricao;
     private boolean completa;
@@ -16,13 +16,14 @@ public class Tarefa {
     public Tarefa(){
         this.dataAgora = LocalDateTime.now();
         this.completa = false;
-
     }
+
     //Construtor com titulo
     public Tarefa(String titulo){
         this();
         this.titulo = titulo;
     }
+
     //Construtor com titulo e descrição
     public Tarefa(String titulo, String descricao){
         this(titulo);
